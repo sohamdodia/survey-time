@@ -1,0 +1,58 @@
+# mutation {
+#   createToken (username: "SohamDodia", password: "password") {
+#     token
+#   }
+# }
+
+# mutation {
+#   createSurvey(name: "Survey 1", questions: [{ question: "Question 1"}]) {
+#     Survey{
+#       name
+#       created_by
+#     }
+#     SurveyQuestion {
+#       question
+#     }
+#   }
+# }
+
+# query {
+#   fetchSurveys {
+#     id
+#     name
+#     created_by
+#     survey_questions {
+#       id
+#       question
+#     }
+#   }
+# }
+
+# mutation {
+#   takeSurvey (question_id: 1, survey_id: 1, selected_option_value: "yes"){
+#     question_id
+#     answer_given_by
+#     selected_option_value
+#   }
+# }
+
+# query {
+#   surveyResult(id: 1) {
+#     name
+#     created_by
+#     survey_questions {
+#       question
+#       survey_answers {
+#         answer_given_by
+#         selected_option_value
+        
+#       }
+#     }
+#   }
+# }
+
+# mutation {
+# 	generateThumbnail(url: "https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80") {
+#     url
+#   }
+# }
